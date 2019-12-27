@@ -20,7 +20,6 @@ query getSinglePhoto($id:ID!) {
   }
 }
 `
-
 const renderProps = ({ loading, error, data }) => {
   if (loading) {
     return <Spinner />

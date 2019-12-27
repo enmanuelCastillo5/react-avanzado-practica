@@ -23,14 +23,3 @@ position: absolute;
 top: 0;
 width: 100%;
 `
-export const Button = styled.button`
-display: flex;
-align-items: center;
-padding-top: 8px;
-background-color: transparent;
-border: 0px;
-& svg {
-    margin-right: 4px;
-}
-
-`
