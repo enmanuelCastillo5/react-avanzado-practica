@@ -1,5 +1,6 @@
 import React from 'react'
 import { GlobalStyle } from './styles/GlobalStyles'
+import Context from './Context'
 
 import Logo from './components/Logo'
 import { NavBar } from './components/NavBar'
@@ -12,12 +13,7 @@ import { Favs } from './pages/Favs'
 import { User } from './pages/User'
 import { NotRegisteredUser } from './pages/NotRegisteredUser'
 
-const UserLogged = ({ children }) => {
-  return children({ isAuth: true })
-}
 export const App = () => {
-/*   const urlParams = new window.URLSearchParams(window.location.search)
-  const detailId = urlParams.get('detail') */
 
   return (
     <div>
@@ -29,7 +25,7 @@ export const App = () => {
         <Detail path='/detail/:detailId' />
       </Router>
 
-      <UserLogged>
+      <Context.Consumer>
         {
           ({ isAuth }) =>
             isAuth
@@ -44,7 +40,7 @@ export const App = () => {
               </Router>
         }
 
-      </UserLogged>
+      </Context.Consumer>
       <NavBar />
     </div>
   )
