@@ -26,7 +26,7 @@ const renderProps = ({ loading, error, data }) => {
   return <ListOfFavs favs={favs} />
 }
 
-export const FavsWithQuery = () =>(
+export const FavsWithQuery = () => (
   <Query query={GET_FAVS} fetchPolicy='network-only'>
     {renderProps}
   </Query>
